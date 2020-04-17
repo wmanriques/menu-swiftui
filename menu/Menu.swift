@@ -10,7 +10,11 @@ import SwiftUI
 
 public struct Menu: View {
     
-    @Binding var isOpen: Bool
+    @Binding private var isOpen: Bool
+    
+    public init(isOpen: Binding<Bool>){
+        self._isOpen = isOpen
+    }
     
     public var body: some View {
         menu
