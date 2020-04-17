@@ -18,7 +18,7 @@ struct ContentView: View {
                 Text("content")
                 .navigationBarItems(leading: burger)
             }
-            menu
+            Menu(isOpen: $isOpen)
         }
     }
 }
@@ -37,35 +37,6 @@ extension ContentView {
         }) {
             Image(systemName: "line.horizontal.3")
         }
-    }
-    
-    var menu: some View {
-        
-        var close: some View {
-            Button(action: {
-                self.isOpen.toggle()
-            }) {
-                Image(systemName: "xmark")
-            }
-            .padding()
-        }
-        
-        return ZStack {
-            Rectangle()
-                .fill(Color.white)
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                HStack{
-                    Spacer()
-                    close
-                }
-                Spacer()
-                Text("menu")
-                Spacer()
-            }
-        }
-        .offset(x: isOpen ? 0 : -UIScreen.main.bounds.width)
-            .animation(.default)
     }
 }
 
