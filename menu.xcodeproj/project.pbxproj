@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F24D53D32449F81100A43D2A /* menu.h in Headers */ = {isa = PBXBuildFile; fileRef = F24D53D12449F81100A43D2A /* menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F24D53DA2449F85A00A43D2A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24D53D92449F85A00A43D2A /* Menu.swift */; };
+		F24D53DC2449F9AD00A43D2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24D53DB2449F9AD00A43D2A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F24D53CE2449F81100A43D2A /* menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24D53D12449F81100A43D2A /* menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = menu.h; sourceTree = "<group>"; };
 		F24D53D22449F81100A43D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F24D53D92449F85A00A43D2A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		F24D53DB2449F9AD00A43D2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				F24D53D12449F81100A43D2A /* menu.h */,
 				F24D53D22449F81100A43D2A /* Info.plist */,
+				F24D53D92449F85A00A43D2A /* Menu.swift */,
+				F24D53DB2449F9AD00A43D2A /* ContentView.swift */,
 			);
 			path = menu;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					F24D53CD2449F81100A43D2A = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -131,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24D53DC2449F9AD00A43D2A /* ContentView.swift in Sources */,
+				F24D53DA2449F85A00A43D2A /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 		F24D53D72449F81100A43D2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wsk.menu;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +294,7 @@
 		F24D53D82449F81100A43D2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
