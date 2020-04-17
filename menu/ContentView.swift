@@ -40,16 +40,33 @@ extension ContentView {
     }
     
     var menu: some View {
-        ZStack {
+        
+        var close: some View {
+            Button(action: {
+                self.isOpen.toggle()
+            }) {
+                Image(systemName: "xmark")
+            }
+            .padding()
+        }
+        
+        return ZStack {
             Rectangle()
                 .fill(Color.white)
                 .edgesIgnoringSafeArea(.all)
             VStack{
+                HStack{
+                    Spacer()
+                    close
+                }
+                Spacer()
                 Text("menu")
                 Spacer()
             }
         }
         .offset(x: isOpen ? 0 : -UIScreen.main.bounds.width)
-        .animation(.default)
+            .animation(.default)
     }
 }
+
+
